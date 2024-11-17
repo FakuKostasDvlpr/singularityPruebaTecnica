@@ -10,7 +10,7 @@ const navigationItems = [
   { name: 'Únete a Nuestro Equipo', href: '#franchise' }
 ]
 
-export function LandingPageJsx() {
+export function LandingPageJsx({onLogout}) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -21,7 +21,7 @@ export function LandingPageJsx() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll);
   }, [])
-
+  
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
       <header
@@ -60,6 +60,7 @@ export function LandingPageJsx() {
                   {item.name}
                 </motion.a>
               ))}
+              <button className='bg-white hover:bg-transparent hover:border border-white hover:text-white font-bold text-red-500 rounded-full px-5 hover:cursor-pointer' onClick={() => onLogout()}>LogOut</button>
             </div>
             <motion.button
               whileTap={{ scale: 0.95 }}

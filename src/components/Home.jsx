@@ -23,7 +23,7 @@ export default function Home({ onLogout }) {
 
     return (
         <>
-            <LandingPageJsx />
+            <LandingPageJsx onLogout={handleLogout} />
             <PetServicesHero />
             <TestimonialCarousel/>
             <HowItWorks/>

@@ -7,32 +7,29 @@ import { Animated_404 } from './components/animated-404';
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  // Chequear si hay un token en el montaje inicial del componente
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      setIsAuthenticated(true); // Si hay token, usuario está autenticado
+      setIsAuthenticated(true); 
     }
   }, []);
 
-  // Manejar autenticación tras login/registro
   const handleAuthentication = (token) => {
     if (token) {
       localStorage.setItem('token', token);
-      setIsAuthenticated(true); // Cambia a autenticado
+      setIsAuthenticated(true); 
     }
   };
 
-  // Manejar logout y limpiar el token
+  
   const handleLogout = () => {
     localStorage.removeItem('token');
-    setIsAuthenticated(false); // Cambia a no autenticado
+    setIsAuthenticated(false); 
   };
 
   return (
     <Router>
       <Routes>
-        {/* Redirigir a /home si está autenticado y accede a la ruta raíz */}
         <Route 
           path="/" 
           element={isAuthenticated ? <Navigate to="/home" /> : <LoginFormJsx onAuth={handleAuthentication} />} 
