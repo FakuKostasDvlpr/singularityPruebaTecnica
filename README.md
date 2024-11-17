@@ -20,6 +20,11 @@ Esta es una aplicación creada con **React** y **Vite** que permite a los usuari
    ```bash
    git clone <URL_DEL_REPOSITORIO>
 
+2. **Descarga el repositorio:**
+
+   ```bash
+   npm install 
+
 ## Uso
 
 ### Registro de Usuario
@@ -44,13 +49,4 @@ Esta es una aplicación creada con **React** y **Vite** que permite a los usuari
 - **[@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react)**: Plugin de Vite para soportar React con Fast Refresh.
 - **SWC**: Utilizado para un rendimiento optimizado en el desarrollo con React.
 
-## Reglas para el Registro
 
-Para poder registrarte exitosamente, el correo electrónico debe pertenecer a una de las siguientes direcciones permitidas:
-
-- byron.fields@reqres.in
-- george.edwards@reqres.in
-- rachel.howell@reqres.in
-- eve.holt@reqres.in
-
-Asegúrate de utilizar una de estas direcciones de correo electrónico al registrarte para poder acceder a la aplicación.
