@@ -60,7 +60,7 @@ export function LandingPageJsx({onLogout}) {
                   {item.name}
                 </motion.a>
               ))}
-              <button className='bg-white hover:bg-transparent hover:border border-white hover:text-white font-bold text-red-500 rounded-full px-5 hover:cursor-pointer' onClick={() => onLogout()}>LogOut</button>
+              <button className='bg-white hover:bg-red hover:border border-white hover:text-red-400 hover:text-white font-bold text-red-500 rounded-full px-5 hover:cursor-pointer' onClick={() => onLogout()}>LogOut</button>
             </div>
             <motion.button
               whileTap={{ scale: 0.95 }}
